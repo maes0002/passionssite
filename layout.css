@@ -1,0 +1,289 @@
+/*************** Reset *********************/
+/* * {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  color: rgb(0, 0, 0);
+} */
+
+/*************** Menu ****************/
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 30px;
+  object-fit: cover;
+}
+
+header {
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.logo_img {
+  height: 30px;
+  width: 60px;
+  object-fit: cover;
+}
+
+h1,
+img {
+  display: inline-block;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.menu li:last-child {
+  margin-right: 0;
+}
+
+.menu a {
+  display: block;
+  padding: 10px;
+  color: #000000;
+  text-decoration: none;
+  transition: color 0.3s;
+  text-align: end;
+  background-color: #ffffff;
+  font-family: "Permanent Marker", sans-serif;
+  padding: 15px 50px 15px 50px;
+}
+
+.menu a:hover {
+  background-color: #196dcd;
+  color: #ffffff;
+  transition: 0.5s ease;
+}
+.burger {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.burger .line {
+  width: 100%;
+  height: 2px;
+  background-color: #4a3e33;
+  margin-bottom: 5px;
+  transition: 0.2s linear;
+}
+.burger {
+  display: none;
+}
+@media screen and (max-width: 800px) {
+  .menu {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    transition: 0.2s linear;
+  }
+
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.15s linear;
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transition: 0.2s linear;
+  }
+
+  nav.active .menu {
+    display: block;
+
+    position: absolute;
+    top: 94px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 10px 10px #ffffff;
+    z-index: 1;
+  }
+
+  nav.active .menu li {
+    margin: 10px 20px;
+  }
+
+  nav.active .menu a {
+    font-size: 24px;
+  }
+}
+
+.hero_animation {
+  overflow: hidden; /*har puttet overflow: hidden på. - det gør at alt uden om div'en ikke bliver vist.*/
+  border-radius: 15px; /*derefter border radius, så kanterne bliver rundet.*/
+}
+
+.grid_1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  border-radius: 15px;
+  margin-top: 40px;
+}
+
+.grid_1-1_tekst {
+  padding: 0px 20px 0px 0px;
+}
+
+.hunter_closeup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid_1-1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+  margin: 30px 0px 50px 0px;
+}
+
+.grid_1-1-1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Skærer billedet, hvis det er for stort */
+  border-radius: 15px; /* Giver runde hjørner */
+}
+.lodret_bro {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 2;
+  overflow: hidden;
+}
+
+.vandret_bro {
+  grid-column: 2 / span 2;
+  grid-row: 1 / span 1;
+  overflow: hidden;
+  aspect-ratio: 9/4;
+}
+
+.vandret_sti {
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
+  overflow: hidden;
+}
+.vandret_bænk {
+  grid-column: 3 / span 1;
+  grid-row: 2 / span 1;
+  overflow: hidden;
+}
+
+.video_grid_1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 30px 0px 30px 0px;
+}
+
+.video_grid_1-1 video,
+.video_grid_1-1 iframe {
+  width: 100%; /* Sørg for at fylde hele containeren */
+  height: 300px;
+  object-fit: cover; /* Gør at videoen dækker containeren uden at ændre aspect ratio */
+}
+
+.video_grid_1-1 iframe {
+  border: none;
+}
+
+footer {
+  text-align: center;
+}
+
+@media (max-width: 750px) {
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .grid_1-1_tekst {
+    padding: 10px 40px 10px 40px;
+  }
+
+  .grid_1-1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 20px 0px 50px 0px;
+  }
+
+  .grid_1-1-1 img {
+    aspect-ratio: 1/1; /* Ens størrelse og proportioner */
+    object-fit: cover; /* Skærer billedet, hvis det er for stort */
+    border-radius: 15px; /* Giver runde hjørner */
+  }
+
+  .lodret_bro {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 2;
+    overflow: hidden;
+    aspect-ratio: 1/1;
+  }
+
+  .vandret_bro {
+    grid-column: 2 / span 2;
+    grid-row: 1 / span 1;
+    overflow: hidden;
+    aspect-ratio: 1/1;
+  }
+  .vandret_sti {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    overflow: hidden;
+    aspect-ratio: 1/1;
+  }
+  .vandret_bænk {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+    overflow: hidden;
+  }
+
+  .grid_1-1-1_tekst {
+    padding: 10px 40px 10px 40px;
+  }
+
+  .video_grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .video_grid_1-1 video,
+  .video_grid_1-1 iframe {
+    width: 100%; /* Sørg for at fylde hele containeren */
+    height: 300px;
+    object-fit: cover; /* Gør at videoen dækker containeren uden at ændre aspect ratio */
+  }
+
+  .video_grid_1-1 iframe {
+    border: none;
+  }
+}

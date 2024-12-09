@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vinterbadning</title>
+
+    <link rel="icon" type="image/x-icon" href="/favicon_io/favicon-32x32.png" />
+    <link rel="stylesheet" href="layout.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <!-------------------HEADER---------------------->
+      <div class="logo">
+        <a href="index.html">
+          <img class="logo_img" src="img/logo.svg" alt="Logo" />
+        </a>
+      </div>
+      <div class="header_text">
+        <h1>Passion</h1>
+      </div>
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html">menu</a></li>
+        </ul>
+        <div class="burger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!----------------HERO---------------------->
+
+      <section class="hero">
+        <div class="hero_animation">
+          <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+          <dotlottie-player
+            src="https://lottie.host/155e4b59-ef77-4e54-a665-728b035b4242/4emS968nIm.lottie"
+            border-radius:
+            15px;
+            background="transparent"
+            speed="1"
+            style="width: 100%; height: 100%"
+            loop
+            autoplay
+          ></dotlottie-player>
+        </div>
+      </section>
+
+      <!--------------------GRID_1-1--------------------->
+      <div class="grid_1-1">
+        <div class="grid_1-1_tekst">
+          <h1>Hunter's passion</h1>
+          <h2>Hvorfor vinterbadning?</h2>
+          <p>Hunter DellaGatta har dyrket vinterbadning i flere år. Men hvorfor elsker han at dyppe kroppen i iskoldt vand? Det fortæller han i videoen under.</p>
+        </div>
+
+        <div class="hunter_closeup">
+          <img src="img/hunter_closeup.webp" alt="Billede af mand der er våd efter at have vinterbadet." />
+        </div>
+      </div>
+
+      <!--------------GRID_1-1-1----------------->
+      <div class="grid_1-1-1_tekst">
+        <h2>Hunter foretrækker at vinterbade i Kastrup Søbad</h2>
+      </div>
+
+      <div class="grid_1-1-1">
+        <div class="lodret_bro">
+          <img class="bro" src="img/lodret_bro.webp" alt="Badebro der går ud til badehus" />
+        </div>
+        <div class="vandret_bro">
+          <img src="img/vandret_bro.webp" alt="Badeanstalten" />
+        </div>
+
+        <div class="vandret_bænk">
+          <img src="img/vandret_bænk.webp" alt="Søgræs på stranden" />
+        </div>
+        <div class="vandret_sti">
+          <img src="img/vandret_sti.webp" alt="Sti" />
+        </div>
+      </div>
+
+      <!--------------section - VIDEO-GRID-1_1----------------->
+      <section>
+        <h2>I videoen forklarer Hunter, hvad hans passion er og hvorfor.</h2>
+
+        <div class="video_grid_1-1">
+          <div>
+            <video controls src="icebath_sequence_youtube.mp4"></video>
+          </div>
+          <div>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/pMsRoNpQTbA?si=QgkHNgqrXajfrVWJ"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <!-------------------------------------footer--------------------------------------->
+      <p>Stor tak til Hunter, for at medvirke i videoen</p>
+
+      <p>Lavet af Maja Estrup</p>
+    </footer>
+    <script src="menu.js"></script>
+  </body>
+</html>
